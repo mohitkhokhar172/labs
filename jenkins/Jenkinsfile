@@ -13,11 +13,11 @@ pipeline {
                 echo 'codereview..'
 				bat label: '', script: 'mvn -P metrics pmd:pmd'
             }
-			post {
-                success {
-                    pmd canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '**/pmd.xml', unHealthy: ''
-                }
-            }
+			//post {
+                //success {
+                  //  pmd canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '**/pmd.xml', unHealthy: ''
+               // }
+           // }
 			
         }
         stage('unit-test') {
